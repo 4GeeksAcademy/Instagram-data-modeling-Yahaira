@@ -39,7 +39,7 @@ class Comment(Base):
     text = Column(String(250), nullable=False)
     user_id = Column(Integer, ForeignKey('users.id'))
     post_id = Column(Integer, ForeignKey('post.id'))
-    # Relacions
+    # Relacion
     user = relationship(Users)
     post = relationship(Post)
 
@@ -49,7 +49,7 @@ class Follower(Base):
     id = Column(Integer, primary_key=True)
     user_from_id = Column(Integer, ForeignKey('users.id'))
     user_to_id = Column(Integer, ForeignKey('users.id'))
-    # Relations
+    # Relacion
     users = relationship(Users)
 
 
